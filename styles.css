@@ -2,16 +2,15 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
+    Margin: 0;
     padding: 0;
-    background-color: #1e1e1e;
+    font-family: 'Trirong', sans-serif;
 }
 
 li, a, button {
-    font-family:'Trirong', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    color: #edf0f1;
+    color: #fffafa;
     text-decoration: none;
 }
 
@@ -24,8 +23,7 @@ header{
 
 h1 {
     cursor: pointer;
-    font-family: 'Trirong', sans-serif;
-    color: #edf0f1;
+    color: #fffafa;
 }
 
 .nav_links {
@@ -42,12 +40,12 @@ h1 {
 }
 
 .nav_links li a:hover {
-    color: rgba(0,136,169,1);
+    color: black;
 }
 
 button {
     padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
+    background-color: black;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -55,6 +53,75 @@ button {
 }
 
 button:hover {
-    background-color: rgba(0,136,169,0.8);
+    background-color: transparent;
     transition: 0.3s ease-in;
+}
+
+h2 {
+    color:#fffafa;
+}
+
+#low-opacity-bg-image1 {
+    background-image: url('fundingimg2.PNG');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    isolation: isolate;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}    
+
+#low-opacity-bg-image1::after {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    background: silver;
+    inset: 0;
+    opacity: .3;
+}
+
+#section1 {
+    text-align: center;
+}
+
+#articleonetitle {
+    font-size: 50px;
+    text-align: center;
+}
+
+#low-opacity-bg-image2 {
+    background-image: url('fundingimg1.JPG');
+    background-size: contain;
+    background-position: right;
+    position: relative;
+    isolation: isolate;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10px;
+}
+
+#low-opacity-bg-image2::after {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    background: silver;
+    inset: 0;
+    opacity: .3;
+}
+
+#section2 {
+    text-align: center;
+    width: 59vw;
+    height: 45vh;
+    align-items: center;
+    background-color: black;
+    color: #fffafa;
+    padding: 45px;
+    border-radius: 50%;
+    
+
+#articletwotitle {
+    font-size: 40px;
 }
