@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,600&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
     Margin: 0;
@@ -7,7 +10,7 @@
     font-family: 'Trirong', sans-serif;
 }
 
-li, a, button {
+li, .navlinks, button {
     font-weight: 600;
     font-size: 16px;
     color: #fffafa;
@@ -35,11 +38,11 @@ h1 {
     padding: 0 20px;
 }
 
-.nav_links li a {
+.nav_links li .navlinks {
     transition: all 0.3s ease 0s;
 }
 
-.nav_links li a:hover {
+.nav_links li .navlinks:hover {
     color: black;
 }
 
@@ -55,6 +58,51 @@ button {
 button:hover {
     background-color: transparent;
     transition: 0.3s ease-in;
+}
+
+.box {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+
+.box span:nth-child(2)
+{
+    animation-delay: -0.2s;
+}
+
+.box span:nth-child(3)
+{
+    animation-delay: -0.4s;
+}
+@keyframes animate 
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
 }
 
 #low-opacity-bg-image1 {
@@ -104,10 +152,6 @@ button:hover {
     height: 99%;
     background-color: black;
 }    
-
-#articletwotitle {
-    font-size: 80px;
-}
 
 img {
     width: 100%;
