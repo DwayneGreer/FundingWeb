@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding: 1rem;
 }
 * {
     box-sizing: border-box;
@@ -62,7 +63,7 @@ button:hover {
 
 .box {
     position: absolute;
-    top: 85%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -149,7 +150,7 @@ button:hover {
     text-align: center;
     align-items: center;
     color: RGB(251,102,95);
-    height: 99%;
+    height: 100%;
     background-color: black;
 }    
 
@@ -160,7 +161,7 @@ img {
 }
 
 .articletwopara {
-    font-size: 20px;
+    font-size: 15px;
     background-color: black;
     border-radius: 10px;
     border: solid;
