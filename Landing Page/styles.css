@@ -26,7 +26,6 @@ header{
 }
 
 h1 {
-    cursor: pointer;
     color: #fffafa;
 }
 
@@ -231,6 +230,11 @@ img {
 #parent_container3 {
     background-color: black;
     color: white;
+    padding-top: 15px;
     height: 100vh;
     width: 100vw;
+}
+
+#articlefourtitle {
+    font-size: 30px;
 }
