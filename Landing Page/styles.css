@@ -238,3 +238,15 @@ img {
 #articlefourtitle {
     font-size: 30px;
 }
+#img1 {
+    box-shadow: 5px 5px 10px RGB(251,102,95);
+}
+
+#section2btn {
+    background-color: RGB(251,102,95);
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
