@@ -58,7 +58,7 @@ button {
 
 #img1 {
     width: 50%;
-    max-height: 500px;
+    height: 75%;
 }
 
 h2 {
@@ -66,3 +66,12 @@ h2 {
     font-size: 40px;
 }
 
+.img-info {
+    display: flex;
+    justify-content: space-evenly;
+    border: solid white;
+}
+
+h2 {
+    align-content: center;
+}

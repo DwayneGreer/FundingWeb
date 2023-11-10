@@ -11,7 +11,7 @@ html {
     font-family: 'Trirong', sans-serif;
 }
 
-li, .navlinks, button {
+li, .navlinks, button, label {
     font-weight: 600;
     font-size: 16px;
     color: #fffafa;
@@ -19,10 +19,41 @@ li, .navlinks, button {
 }
 
 header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    background: transparent;
+    padding: 20px 7%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    justify-content:space-between;
+    z-index: 1000;
+}
+
+header nav ul li {
+    position: relative;
+    float: left;
+}
+
+header nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    display: none;
+}
+
+header nav ul li ul li {
+    width: 100%;
+    border-top: 1px solid white;
+}
+
+header nav ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+header nav ul li:focus-within > ul,
+header nav ul li:hover > ul {
+    display: initial;
 }
 
 h1 {
@@ -33,9 +64,9 @@ h1 {
     list-style: none;
 }
 
-.nav_links li {
-    display: inline-block;
-    padding: 0 20px;
+header nav ul li .navlinks{
+    display: block;
+    padding: 20px;
 }
 
 .nav_links li .navlinks {
@@ -249,4 +280,50 @@ img {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    display: none;
+}
+
+@media(max-width:991px) {
+    #low-opacity-bg-image1 {
+        background-image: url('fundingimg7.PNG');
+    }
+    header {
+        padding: 20px;
+    }
+    header label {
+        display: initial;
+    }
+    .nav_links {
+        display: none;
+    }
+    header nav {
+        position: absolute;
+        top:100%; left: 0; right: 0;
+        background: white;
+        border-top: 1px solid white;
+    }
+    header nav ul li {
+        width: 100%;
+    }
+    header nav ul li ul {
+        position: relative;
+        width: 100%;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    button {
+        display: none;
+    }
+
 }
