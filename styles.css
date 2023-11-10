@@ -293,12 +293,13 @@ header label {
     display: none;
 }
 
-@media(max-width:991px) {
+@media(max-width:414px) {
     #low-opacity-bg-image1 {
         background-image: url('fundingimg7.PNG');
     }
     header {
         padding: 20px;
+        background-color: black;
     }
     header label {
         display: initial;
@@ -309,7 +310,7 @@ header label {
     header nav {
         position: absolute;
         top:100%; left: 0; right: 0;
-        background: white;
+        background: transparent;
         border-top: 1px solid white;
     }
     header nav ul li {
@@ -323,6 +324,23 @@ header label {
         font-size: 20px;
     }
     button {
+        display: none;
+    }
+    #articlefourpara {
+        font-size: 10px;
+    }
+    .articletwopara {
+        font-size: 10px;
+    }
+    #img1 {
+        width: 200px;
+        height: 200px;
+        display: none;
+    }
+    .articletitles {
+        font-size: 20px;
+    }
+    #section2btn {
         display: none;
     }
 
