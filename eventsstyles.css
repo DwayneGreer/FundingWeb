@@ -3,11 +3,8 @@
 * {
     box-sizing: border-box;
     font-family: 'Trirong', sans-serif;
-}
-
-html {
-    background-color: black;
-    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
@@ -59,19 +56,43 @@ button {
 #img1 {
     width: 50%;
     height: 75%;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px black;
 }
 
 h2 {
     color: white;
     font-size: 40px;
+    text-align: center;
 }
 
 .img-info {
     display: flex;
     justify-content: space-evenly;
-    border: solid white;
 }
 
-h2 {
-    align-content: center;
+html {
+    background-image: url('img2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    isolation: isolate;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+html::after {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    background: black;
+    inset: 0;
+    opacity: .3;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
 }
