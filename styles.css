@@ -293,6 +293,10 @@ header label {
     display: none;
 }
 
+p {
+    z-index: 1000;
+}
+
 @media(max-width:414px) {
     #low-opacity-bg-image1 {
         background-image: url('fundingimg7.PNG');
