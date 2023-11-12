@@ -1,66 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,600&display=swap');
 
-* {
-    box-sizing: border-box;
-    font-family: 'Trirong', sans-serif;
-    padding: 0;
-    margin: 0;
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 1rem;
     background-color: black;
 }
 
-h1 {
-    color: #fffafa;
-}
-
-li, .navlinks, button {
-    font-weight: 600;
-    font-size: 16px;
-    color: #fffafa;
+*{
+    padding: 0;
+    margin: 0;
     text-decoration: none;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-}
-
-.nav_links {
     list-style: none;
+    box-sizing: border-box;
+    font-family: 'Trirong', sans-serif;
+}
+  
+nav {
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    font-family: 'Trirong', sans-serif;;
 }
 
-.nav_links li {
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
     display: inline-block;
-    padding: 0 20px;
-}
-
-.nav_links li .navlinks {
-    transition: all 0.3s ease 0s;
-}
-
-button {
-    padding: 9px 25px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 50px;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+  
+  a:hover {
+    color: RGB(251,102,95);
+  }
+  
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: black;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: RGB(251,102,95);
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+    .floaters {
+        display: none;
+    }
+  }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 225px;
+    height: 225px;
+    border-radius: 15px;
+    border: 5px solid transparent;
+    background:
+    linear-gradient(135deg,white,RGB(251,102,95)) padding-box,
+    linear-gradient(135deg, white, RGB(251,102,95)) border-box;
 }
 
 .imgcontainer {
     align-items: center;
     align-self: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    display: flex;
+    width: 50%;
+}
+
+.bigcontainer {
+  display: flex;
+  justify-content: flex-end;
+  height: 40vh;
 }
 
 h2 {
     color: white;
     text-align: center;
+}
+
+p {
+  color: white;
 }
